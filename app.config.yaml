@@ -1,0 +1,17 @@
+application:
+  actions: actions
+  web: web-src
+  runtimeManifest:
+    packages:
+      tts-demo:
+        license: Apache-2.0
+        actions:
+          generic:
+            function: actions/generic/index.js
+            web: 'yes'
+            runtime: 'nodejs:14'
+            inputs:
+              LOG_LEVEL: debug
+            annotations:
+              require-adobe-auth: true
+              final: true

@@ -3,15 +3,15 @@ application:
   web: web-src
   runtimeManifest:
     packages:
-      tts-demo:
+      aio-tts-demo-polly:
         license: Apache-2.0
         actions:
-          generic:
-            function: actions/generic/index.js
+          polly:
+            function: actions/polly/index.js
             web: 'yes'
             runtime: 'nodejs:14'
             inputs:
               LOG_LEVEL: debug
             annotations:
-              require-adobe-auth: true
+              require-adobe-auth: false
               final: true
